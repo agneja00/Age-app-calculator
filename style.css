@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("assets/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "PoppinsBold";
+    src: url("assets/fonts/Poppins-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "PoppinsExtraBold";
+    src: url("assets/fonts/Poppins-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "PoppinsExtraBoldItalic";
+    src: url("assets/fonts/Poppins-ExtraBoldItalic.ttf") format("truetype");
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: hsl(0, 0%, 86%);
+}
+
+.content-container {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 2rem 2rem 6rem 2rem;
+    margin: 4rem 2rem;
+    padding: 2rem;
+}
+
+.inputs-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.label-with-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.label {
+    font-family: "PoppinsBold", sans-serif;
+    color: hsl(0, 1%, 44%);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.2rem;
+}
+
+.input {
+    font-family: "PoppinsBold", sans-serif;
+    max-width: 9rem;
+    width: 100%;
+    font-size: 1.2rem;
+    border: 1px hsl(0, 0%, 86%) solid;
+    border-radius: 0.5rem;
+    padding: 0.625rem;
+}
+
+.input:focus {
+    outline: 1px hsl(259, 100%, 65%) solid;
+}
+
+.input-error {
+    color: hsl(0, 100%, 67%);
+    font-style: italic;
+}
+
+.total {
+    font-family: "PoppinsExtraBoldItalic", sans-serif;
+    font-size: 2.8rem;
+    line-height: 3.5rem;
+}
+
+.digits {
+    color: hsl(259, 100%, 65%);
+}
+
+.animation {
+    animation: animation ease 2s;
+}
+
+@keyframes animation {
+    0% {
+        color: hsl(257, 33%, 15%);
+        font-size: 2rem;
+    }
+
+    50% {
+        color: hsl(259, 54%, 37%);
+        font-size: 2.3rem;
+    }
+
+    100% {
+        color: hsl(259, 100%, 65%);
+        font-size: 2.8rem;
+    }
+}
+
+.btn-container {
+    position: relative;
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 0.125rem;
+    background-color: hsl(0, 0%, 86%);
+    transform: translateY(-50%);
+}
+
+.btn {
+    position: relative;
+    background-color: hsl(259, 100%, 65%);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: hsl(0, 0%, 8%);
+}
+
+.btn-img {
+    width: 50%;
+}
+
+.footer-paragraph {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 1440px) {
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .content-container {
+        width: 50%;
+        height: 35rem;
+    }
+
+    .input {
+        font-size: 2rem;
+    }
+
+    .total {
+        font-size: 4.7rem;
+        line-height: 5rem;
+    }
+
+    .btn-container {
+        justify-content: flex-end;
+    }
+
+    @keyframes animation {
+        0% {
+            color: hsl(259, 46%, 43%);
+            font-size: 3.8rem;
+        }
+
+        50% {
+            color: hsl(259, 80%, 44%);
+            font-size: 4.3rem;
+        }
+
+        100% {
+            color: hsl(259, 100%, 65%);
+            font-size: 4.7rem;
+        }
+    }
+}

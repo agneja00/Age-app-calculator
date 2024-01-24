@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age calculator app</title>
+    <link rel="icon" href="assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="js/script.js" defer></script>
+</head>
+
+<body>
+    <main class="main">
+        <div class="content-container">
+            <div class="inputs-container">
+                <div class="label-with-input">
+                    <label class="label" id="label-day" for="user-day">day</label>
+                    <input class="input input-day" id="user-day" type="text" name="day" placeholder="DD"
+                        required>
+                    <p class="input-error" id="error-day"></p>
+                </div>
+                <div class="label-with-input">
+                    <label class="label" id="label-month" for="user-month">month</label>
+                    <input class="input input-month" id="user-month" type="text" name="month"
+                        placeholder="MM" required>
+                    <p class="input-error" id="error-month"></p>
+                </div>
+                <div class="label-with-input">
+                    <label class="label" id="label-year" for="user-year">year</label>
+                    <input class="input input-year" id="user-year" type="text" name="year" placeholder="YYYY"
+                        required>
+                    <p class="input-error" id="error-year"></p>
+                </div>
+            </div>
+            <div class="btn-container">
+                <button class="btn" type="button">
+                    <img class="btn-img" src="assets/images/icon-arrow.svg" alt="button image">
+                </button>
+            </div>
+            <p class="total"><span class="digits" id="total-years">--</span> years</p>
+            <p class="total"><span class="digits" id="total-months">--</span> months</p>
+            <p class="total"><span class="digits" id="total-days">--</span> days</p>
+        </div>
+    </main>
+    <footer>
+        <p class="footer-paragraph">Challenge by Frontend Mentor. Coded by 
+            <a href="https://www.frontendmentor.io/profile/agneja00" target="_blank">Agnieska</a>.
+        </p>
+    </footer>
+</body>
+
+</html>
